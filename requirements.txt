@@ -10,3 +10,4 @@ datetime
 numpy_financial
 pydantic
 gunicorn==19.7.1
+python==3.10
