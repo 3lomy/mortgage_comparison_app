@@ -23,6 +23,8 @@ from dash.dash import no_update
 from dash.dependencies import ALL, MATCH
 from dash import callback_context
 
+import os
+
 
 # In[2]:
 
@@ -74,6 +76,9 @@ import dash_extensions as de
 
 
 # In[8]:
+
+# Get the locale path from environment variable
+locale = os.getenv('LOCALE_PATH', 'locale')  # Default to 'locale' if the env variable is not set
 
 
 LOCALE = "en"
