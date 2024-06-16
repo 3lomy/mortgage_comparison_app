@@ -3,9 +3,6 @@ jupyter_dash
 dash_bootstrap_components
 pandas
 numpy
-plotly.express
-plotly.graph_objects
-plotly.subplots
 plotly
 dash_extensions
 i18n
