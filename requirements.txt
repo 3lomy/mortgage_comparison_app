@@ -7,6 +7,5 @@ plotly
 dash_extensions
 i18n
 datetime
-calendar
 numpy_financial
 pydantic
