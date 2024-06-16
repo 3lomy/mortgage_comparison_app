@@ -28,7 +28,7 @@ from dash import callback_context
 
 
 # packages for processing
-import i18n
+import i18n as i18n
 # import dash_i18n
 
 
@@ -77,8 +77,8 @@ import dash_extensions as de
 
 
 LOCALE = "en"
-# i18n.set("locale", LOCALE)
-# i18n.load_path.append("locale")
+i18n.set("locale", LOCALE)
+i18n.load_path.append("locale")
 
 
 # In[9]:
