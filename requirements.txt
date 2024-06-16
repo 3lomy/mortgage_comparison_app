@@ -9,3 +9,4 @@ i18n
 datetime
 numpy_financial
 pydantic
+gunicorn==19.7.1
