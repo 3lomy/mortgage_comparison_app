@@ -77,7 +77,7 @@ import dash_extensions as de
 
 
 LOCALE = "en"
-i18n.set("locale", LOCALE)
+# i18n.set("locale", LOCALE)
 i18n.load_path.append("locale")
 
 
