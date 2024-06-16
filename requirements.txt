@@ -5,7 +5,7 @@ pandas
 numpy
 plotly
 dash_extensions
-i18n
+python-i18n
 datetime
 numpy_financial
 pydantic
