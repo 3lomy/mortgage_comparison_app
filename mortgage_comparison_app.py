@@ -98,7 +98,7 @@ external_stylesheets = [
 app = Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=external_stylesheets)
 
 # required line before upload to render
-# server = app.server 
+server = app.server 
 
 # Set the title of the app
 app.title = 'Mortgage Comparison App'
