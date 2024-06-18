@@ -84,7 +84,7 @@ import dash_extensions as de
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Add the locale path (from environment variable or default to 'locale')
-locale = os.getenv('LOCALE_PATH', os.path.join(current_directory, 'locale'))
+locale = os.path.join(current_directory, 'locale')
 
 LOCALE = "en"
 i18n.set("locale", LOCALE)
