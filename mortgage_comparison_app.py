@@ -30,7 +30,7 @@ import os
 
 
 # packages for processing
-import i18n as i18n
+import i18n
 # import dash_i18n
 
 
@@ -81,10 +81,10 @@ import dash_extensions as de
 # locale = os.getenv('LOCALE_PATH', 'locale')  # Default to 'locale' if the env variable is not set
 
 # Get the absolute path to the current directory
-current_directory = os.path.dirname(os.path.abspath(__file__))
+# current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Add the locale path (from environment variable or default to 'locale')
-locale = current_directory
+# locale = current_directory
 
 LOCALE = "en"
 i18n.set("locale", LOCALE)
