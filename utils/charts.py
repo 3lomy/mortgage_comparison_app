@@ -156,8 +156,17 @@ def create_waterfall_chart(df):
         height=350 * len(df['Mortgage Lender'].unique()),  # Adjust height based on the number of banks
         showlegend=False,
     )
+
+   # Ensure the images directory exists
+    images_dir = 'images'
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
+
+    # Save the image to the directory
+    image_path = os.path.join(images_dir, 'waterfall_chart.png')
+    waterfall_chart.write_image(image_path)
     
-    waterfall_chart.write_image(r'images\waterfall_chart.png')
+    # waterfall_chart.write_image(r'images\waterfall_chart.png')
     
     return waterfall_chart
 
