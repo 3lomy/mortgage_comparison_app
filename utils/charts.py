@@ -163,10 +163,10 @@ def create_waterfall_chart(df):
         os.makedirs(images_dir)
 
     # Save the image to the directory
-    image_path = os.path.join(images_dir, 'waterfall_chart.png')
-    waterfall_chart.write_image(image_path)
+    #image_path = os.path.join(images_dir, 'waterfall_chart.png')
+    #waterfall_chart.write_image(image_path)
     
-    # waterfall_chart.write_image(r'images\waterfall_chart.png')
+    waterfall_chart.write_image(r'images\waterfall_chart.png')
     
     return waterfall_chart
 
