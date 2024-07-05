@@ -21,6 +21,9 @@ import plotly.subplots as sp
 
 # In[ ]:
 
+import logging
+import os
+
 
 # packages for dash components
 from dash import dash_table
@@ -91,7 +94,9 @@ def create_schedule_table(schedule_df):
 
 # In[ ]:
 
-
+# Set up logging
+logging.basicConfig(level=logging.DEBUG, filename='charting.log')
+logger = logging.getLogger(__name__)
 
 
 
@@ -159,14 +164,17 @@ def create_waterfall_chart(df):
 
    # Ensure the images directory exists
     images_dir = 'images'
-    if not os.path.exists(images_dir):
-        os.makedirs(images_dir)
-
-    # Save the image to the directory
-    #image_path = os.path.join(images_dir, 'waterfall_chart.png')
-    #waterfall_chart.write_image(image_path)
+    try:
+        if not os.path.exists(images_dir):
+            os.makedirs(images_dir)
+        # Save the image to the directory
+        image_path = os.path.join(images_dir, 'waterfall_chart.png')
+        waterfall_chart.write_image(image_path)
+        logger.info(f"Image saved successfully to {image_path}")
+    except Exception as e:
+        logger.error(f"Failed to write image to {image_path}: {e}")
     
-    waterfall_chart.write_image(r'images\waterfall_chart.png')
+    # waterfall_chart.write_image(r'images\waterfall_chart.png')
     
     return waterfall_chart
 
